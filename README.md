@@ -42,3 +42,28 @@ messages : messages class controller의 이름 (/뒤 messages)
 
 ```
 
+# HTTP 요청 데코레이터
+1. @Param() => https://localhost:3000/[id]  => @Param(id)  
+2. @Query()
+3. @Body() => http의 body 
+4. @Header()
+
+# 자동 validation 세팅 과정
+1. global validation 연결하기 
+```
+// main.ts
+app.useGloablPipes(
+    new ValidationPipe()
+)
+```
+2. DTO 작성하기 (Data transfer object) => create-message.dto.ts
+3. class에 validation rule 작성하기 => class-vlidator 사용
+4. request handler에 class 적용하기
+
+✨흐름  
+1. class-transformer에 의해 body가 DTO 클래스의 인스턴스로 바뀜
+2. class-validator로 인스턴스 검증
+3. 검증받은 데이터 request handler에 제공  
+
+🚧타입 정보가 JavaScript에서 유지되는 이유   
+emitDecoratorMetadat option을 true로 설정하면 데코레이터의 타입을 할당해줄 수 있다. 
