@@ -80,3 +80,9 @@ class 내부에서 의존성을 가지고 있는 인스턴스를 생성해서는
 4. 컨테이너에 저장된 인스턴스가 재요청되면 복사되지 않고 바로 사용되어 만들어진다.   
 
 ⚠️ 제어의 역전을 사용했을 때 코드의 복잡성을 낮추기 위해 의존성 주입을 사용한다.  
+
+
+# 모듈 공유 방법
+1. Module 안에 있는 Class(Service, Repository...)를 Export 한다.
+2. 사용하려는 Module에서 위 Module을 Import한다.
+3. Constructor 생성자에 인자로 Class(Service, Repo...)를 넘겨 사용한다.
