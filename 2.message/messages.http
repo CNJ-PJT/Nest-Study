@@ -8,10 +8,10 @@ Post http://localhost:3000/messages
 Content-Type: application/json
 
 {
-    "content" :"NEST SERVICE REPOSITORY 실습 완"
+    "content" :"정원재 돼지"
 }
 
 
 ### get message
-GET http://localhost:3000/messages/954
+GET http://localhost:3000/messages/123
 
