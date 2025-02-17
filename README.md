@@ -86,3 +86,8 @@ class 내부에서 의존성을 가지고 있는 인스턴스를 생성해서는
 1. Module 안에 있는 Class(Service, Repository...)를 Export 한다.
 2. 사용하려는 Module에서 위 Module을 Import한다.
 3. Constructor 생성자에 인자로 Class(Service, Repo...)를 넘겨 사용한다.
+
+# 엔터티 생성방법
+1. Entity class를 생성한다. 
+2. 부모 모듈에 entity를 import한다. (TypeORM.forFeature([엔터티]))
+3. app 모듈의 entities에 entity를 나열한다. => 나열한 entity들은 db에 테이블로 만들어진다.  
