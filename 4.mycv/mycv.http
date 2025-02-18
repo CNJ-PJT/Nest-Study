@@ -18,7 +18,7 @@ GET http://localhost:3000/auth?email=bbbbbb@gmail.com
 
 ### Update user
 
-PATCH http://localhost:3000/auth/1
+PATCH http://localhost:3000/auth/3
 Content-Type: application/json
 
 {
@@ -27,4 +27,4 @@ Content-Type: application/json
 
 ### Delete user
 
-DELETE http://localhost:3000/auth/1
+DELETE http://localhost:3000/auth/21

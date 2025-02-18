@@ -1,4 +1,12 @@
-import { Entity, Column, PrimaryGeneratedColumn, AfterInsert, AfterUpdate, AfterRemove } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  AfterInsert,
+  AfterUpdate,
+  AfterRemove,
+  BeforeRemove,
+} from 'typeorm';
 
 @Entity()
 export class User {
@@ -21,7 +29,7 @@ export class User {
     console.log(`update id value is ${this.id}`);
   }
 
-  @AfterRemove()
+  @BeforeRemove()
   logRemove() {
     console.log(`remove id value is ${this.id}`);
   }
