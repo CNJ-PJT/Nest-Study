@@ -7,3 +7,24 @@ Content-Type: application/json
     "password" : "1234",
     "admin" : "True"
 }
+
+### get user 
+
+GET http://localhost:3000/auth/1
+
+### get users
+GET http://localhost:3000/auth?email=bbbbbb@gmail.com
+
+
+### Update user
+
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+    "email":"bbbbbb@gmail.com"
+}
+
+### Delete user
+
+DELETE http://localhost:3000/auth/1
