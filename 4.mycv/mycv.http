@@ -10,10 +10,10 @@ Content-Type: application/json
 
 ### get user 
 
-GET http://localhost:3000/auth/12312421
+GET http://localhost:3000/auth/7
 
 ### get users
-GET http://localhost:3000/auth?email=bbbbbb@gmail.com
+GET http://localhost:3000/auth?email=dj@gmail.com
 
 
 ### Update user
