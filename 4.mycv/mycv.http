@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ### get user 
 
-GET http://localhost:3000/auth/1
+GET http://localhost:3000/auth/12312421
 
 ### get users
 GET http://localhost:3000/auth?email=bbbbbb@gmail.com
@@ -27,4 +27,4 @@ Content-Type: application/json
 
 ### Delete user
 
-DELETE http://localhost:3000/auth/21
+DELETE http://localhost:3000/auth/12312412
