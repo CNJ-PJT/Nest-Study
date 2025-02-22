@@ -119,6 +119,14 @@ True로 설정하여 테이블을 반영합니다.
 ⚠️ 운영 DB로 전환했을 시 사용하면 안됨 열이 삭제되어 레코드가 사라질 수 있음
 
 # Nest가 추천하는 응답 속성 제외 방법
+
 1. entity에서 제외하고자하는 변수에 @Exclude 설정
 2. 컨트롤러에서 @UseInterceptors(ClassSerializeInterceptor) 설정
-⚠️ 단점 : 엔터티를 다르게 보여주고 싶을 때는 사용이 불가능하다. (동적으로 필드를 제외하거나 포함하는 기능 사용 불가능)  
+   ⚠️ 단점 : 엔터티를 다르게 보여주고 싶을 때는 사용이 불가능하다. (동적으로 필드를 제외하거나 포함하는 기능 사용 불가능)
+
+# 더 좋은 방식의 응답 속성 제외 방법
+
+1. 보내고자하는 변수를 가진 dto 생성 (@Expose() 사용)
+2. serialize.interceptor.ts에서 SerializeInterceptor 클래스 생성 (NestInterceptor implements)
+3. 직렬화 타입 안전성을 위해 serialize 커스텀 데코레이터에 생성자 인터페이스(new (...args : any[] : {})) 적용
+4. 컨트롤러 또는 컨트롤러의 매서드에 serialize 커스텀 데코레이터 적용
