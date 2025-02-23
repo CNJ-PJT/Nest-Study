@@ -1,10 +1,10 @@
 ### create message
-Post http://localhost:3000/auth/signup
+Post http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-    "email" :"jdw@gmail.com",
-    "password" : "1234"
+    "email" :"jdw123@gmail.com",
+    "password" : "1234123"
 }
 
 ### get user 
